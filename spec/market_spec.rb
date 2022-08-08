@@ -118,7 +118,7 @@ RSpec.describe Market do
     expect(@market.overstocked_items).to eq([@item1])
   end
 
-    xit 'can call sorted item list, alphabetical vendors list?' do
+    it 'can call sorted item list, alphabetical vendors list?' do
       @vendor1.stock(@item1, 35)
       @vendor1.stock(@item2, 7)
       @vendor2.stock(@item4, 50)

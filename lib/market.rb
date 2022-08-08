@@ -39,4 +39,7 @@ class Market
     list_of_items_sold.select { |item| total_inventory[item][:quantity] > 50}
   end
 
+  def sorted_item_list
+    list_of_items_sold.map { |item| item.name }.sort
+  end
 end
