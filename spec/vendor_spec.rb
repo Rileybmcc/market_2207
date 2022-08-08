@@ -17,7 +17,7 @@ RSpec.describe Vendor do
     expect(@vendor.name).to eq("Rocky Mountain Fresh")
   end
 
-  xit 'can call inventory hash' do
+  it 'can call inventory hash' do
     expect(@vendor.inventory).to eq({})
   end
 
