@@ -48,7 +48,7 @@ RSpec.describe Market do
     expect(@market.vendor_names).to eq(["Rocky Mountain Fresh", "Ba-Nom-a-Nom", "Palisade Peach Shack"])
   end
 
-  xit 'can find vendors that sell an item' do
+  it 'can find vendors that sell an item' do
     @vendor1.stock(@item1, 35)
     @vendor1.stock(@item2, 7)
     @vendor2.stock(@item4, 50)
@@ -59,7 +59,7 @@ RSpec.describe Market do
     @market.add_vendor(@vendor3)
 
     expect(@market.vendors_that_sell(@item1)).to eq([@vendor1, @vendor3])
-    expect(@market.vendors_that_sell(@item4)).to eq([@vendor3])
+    expect(@market.vendors_that_sell(@item4)).to eq([@vendor2])
   end
 
   xit 'can determine a vendors potential revinue' do
