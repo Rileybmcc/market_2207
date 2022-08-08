@@ -19,5 +19,18 @@ class Market
     @vendors.select { |vendor| vendor.check_stock(desired_item) > 0 }
   end
 
+  def total_inventory
+    all_items = []
+    full_inventory = Hash.new
+    @vendors.map { |seller| seller.inventory.keys.each { |item| all_items << item } }
+    all_items.uniq.each do |item|
+      full_inventory[item] = {
+        quantity: vendors_that_sell(item).map { |seller| seller.check_stock(item) }.sum,
+         vendors: vendors_that_sell(item)}
+    end
+    full_inventory
+  end
+
+
 
 end
