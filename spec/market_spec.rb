@@ -19,7 +19,7 @@ RSpec.describe Market do
     expect(@market).to be_instance_of(Market)
   end
 
-  xit 'can call market name' do
+  it 'can call market name' do
     expect(@market.name).to eq("South Pearl Street Farmers Market")
   end
 
@@ -40,7 +40,7 @@ RSpec.describe Market do
     expect(@market.vendors).to eq([@vendor1, @vendor2, @vendor3])
   end
 
-  xit 'can call vendor names' do 
+  xit 'can call vendor names' do
     @market.add_vendor(@vendor1)
     @market.add_vendor(@vendor2)
     @market.add_vendor(@vendor3)

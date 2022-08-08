@@ -1,8 +1,8 @@
 class Market
-  attr_reader
+  attr_reader :name
 
-  def initialize(thing)
-
+  def initialize(market_name)
+    @name = market_name
 
   end
 
