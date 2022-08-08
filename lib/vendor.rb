@@ -15,4 +15,8 @@ class Vendor
     @inventory[item_name] += item_quantity
   end
 
+  def potential_revenue
+    @inventory.map { |item, quantity| quantity * item.price }.sum
+  end
+
 end
