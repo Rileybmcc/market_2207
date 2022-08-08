@@ -92,8 +92,19 @@ RSpec.describe Market do
   })
   end
 
+  it 'can find all items sold at market' do
+    @vendor2.stock(@item4, 50)
+    @vendor2.stock(@item3, 25)
+    @vendor3.stock(@item1, 65)
+    @vendor3.stock(@item3, 10)
+    @market.add_vendor(@vendor1)
+    @market.add_vendor(@vendor2)
+    @market.add_vendor(@vendor3)
 
-  it 'can find overstocked items, more than 50  in stock' do
+    expect(@market.list_of_items_sold).to eq([@item4, @item3, @item1])
+  end
+
+  xit 'can find overstocked items, more than 50  in stock' do
     @vendor1.stock(@item1, 35)
     @vendor1.stock(@item2, 7)
     @vendor2.stock(@item4, 50)
