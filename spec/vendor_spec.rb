@@ -13,7 +13,7 @@ RSpec.describe Vendor do
     expect(@vendor).to be_instance_of(Vendor)
   end
 
-  xit 'can call vendor name' do
+  it 'can call vendor name' do
     expect(@vendor.name).to eq("Rocky Mountain Fresh")
   end
 
