@@ -23,7 +23,7 @@ RSpec.describe Market do
     expect(@market.name).to eq("South Pearl Street Farmers Market")
   end
 
-  xit 'can call vendors array' do
+  it 'can call vendors array' do
     expect(@market.vendors).to eq([])
   end
 
