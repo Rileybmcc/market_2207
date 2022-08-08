@@ -11,7 +11,7 @@ RSpec.describe Item do
     expect(@item1).to be_instance_of(Item)
   end
 
-  xit 'can access item name' do
+  it 'can access item name' do
     expect(@item2.name).to eq("Tomato")
   end
 
