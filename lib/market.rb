@@ -35,5 +35,8 @@ class Market
     full_inventory
   end
 
+  def overstocked_items
+    list_of_items_sold.select { |item| total_inventory[item][:quantity] > 50}
+  end
 
 end
