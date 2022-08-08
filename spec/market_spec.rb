@@ -27,7 +27,7 @@ RSpec.describe Market do
     expect(@market.vendors).to eq([])
   end
 
-  xit 'can add vendors to market' do
+  it 'can add vendors to market' do
     @vendor1.stock(@item1, 35)
     @vendor1.stock(@item2, 7)
     @vendor2.stock(@item4, 50)
