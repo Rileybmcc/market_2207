@@ -40,7 +40,7 @@ RSpec.describe Market do
     expect(@market.vendors).to eq([@vendor1, @vendor2, @vendor3])
   end
 
-  xit 'can call vendor names' do
+  it 'can call vendor names' do
     @market.add_vendor(@vendor1)
     @market.add_vendor(@vendor2)
     @market.add_vendor(@vendor3)
