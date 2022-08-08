@@ -131,4 +131,8 @@ RSpec.describe Market do
 
       expect(@market.sorted_item_list).to eq(["Banana Nice Cream", "Peach", "Peach-Raspberry Nice Cream", "Tomato"])
     end
+
+    it 'can call date' do
+      expect(@market.date).to eq("08/08/2022")
+    end
 end
