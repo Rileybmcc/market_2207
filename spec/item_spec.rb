@@ -15,7 +15,7 @@ RSpec.describe Item do
     expect(@item2.name).to eq("Tomato")
   end
 
- xit 'can access item price' do
+ it 'can access item price' do
    expect(@item2.price).to eq(0.5)
  end
 
