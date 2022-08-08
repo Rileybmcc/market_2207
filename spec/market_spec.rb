@@ -133,6 +133,7 @@ RSpec.describe Market do
     end
 
     it 'can call date' do
+      allow(@market).to receive(@market.date).and_return("08/08/2022")
       expect(@market.date).to eq("08/08/2022")
     end
 end
