@@ -11,6 +11,8 @@ class Vendor
     @inventory[:desired_item]
   end
 
-
+  def stock(item_name, item_quantity)
+    @inventory[item_name] += item_quantity
+  end
 
 end
